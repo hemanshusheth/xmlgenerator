@@ -1,0 +1,103 @@
+﻿<Window x:Class="XmlGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:XmlGenerator="clr-namespace:XmlGenerator" Title="Xml Generator"
+        WindowStartupLocation="CenterScreen"
+        Height="800" 
+        Width="1000"
+        MaxHeight="800"
+        MaxWidth="1000"
+        Margin="20"
+        Background="Ivory">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="270"/>
+            <ColumnDefinition Width="680"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Menu IsMainMenu="True">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" Command="New" Click="newMenu_Click"></MenuItem>
+                <MenuItem Header="_Open" Command="Open" Click="openMenu_Click"></MenuItem>
+                <MenuItem Header="_Save" Command="Save" Click="saveMenu_Click"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Command="Close"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Border Padding="2" Background="LightYellow" 
+          BorderBrush="Black" BorderThickness="2" CornerRadius="3"
+          VerticalAlignment="Top" Margin="5,80" Height="513">
+            <StackPanel Grid.Column="0"    
+                    Drop="PanelMain_Drop" 
+                    Name="panel_usercontrols">
+                <XmlGenerator:MyUserControl  />
+            </StackPanel>
+        </Border>
+        <Border Padding="2" Background="LightYellow" 
+          BorderBrush="Black" BorderThickness="2" CornerRadius="3"
+          VerticalAlignment="Top" Grid.Column="1" >
+            <StackPanel Grid.Column="1" 
+                    Name="strategy_panel" 
+                    Margin="10,10,10,10"
+                    Orientation="Horizontal">
+                <TextBlock Text="Strategy" FontSize="18" Height="25" Margin="100,0,10,0"/>
+                <ComboBox Name="mystrategycombobox" Height="25" Width="120" 
+                      ItemsSource="{Binding Path=StrategyList}" 
+                      DisplayMemberPath="StrategyName" 
+                      SelectedValue="{Binding Path=Strategy}"
+                      SelectionChanged="mystrategycombobox_SelectionChanged" 
+                      Loaded="mystrategycombobox_Loaded" IsEditable="True" 
+                      Padding="2" 
+                      Margin="5" />
+                <Button Content="Create New Strategy" Height="25" Name="buttonSaveStrategy" Width="125" Padding="0" Margin="5" Click="buttonSaveStrategy_Click" />
+                <Button Content="Delete Strategy" Height="25" Name="buttonDeleteStrategy" Width="125" Padding="0" Margin="5" Click="buttonDeleteStrategy_Click" />
+            </StackPanel>
+        </Border>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Column="1" Margin="0,80,200,10">
+            <StackPanel Grid.Column="1" 
+                    AllowDrop="True"
+                    PreviewMouseLeftButtonDown="PanelMain_PreviewMouseLeftButtonDown" 
+                    PreviewMouseLeftButtonUp="PanelMain_PreviewMouseLeftButtonUp" 
+                    PreviewMouseMove="PanelMain_PreviewMouseMove"
+                    Drop="PanelMain_Drop" Name="panel_main"
+                    x:FieldModifier="public"
+                    Background="#FFF8F8F8">
+            </StackPanel>
+        </ScrollViewer>
+        <Border Padding="2" Background="LightYellow" 
+          BorderBrush="Black" BorderThickness="2" CornerRadius="3"
+          VerticalAlignment="Top" Grid.Column="1" Margin="500,80,5,0" Height="250">
+            <Grid Grid.Column="1"  Name="panel_property">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Name="propertyTextBlock" Text="Property" Grid.Column="0" Grid.Row="0" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Name="valueTextBlock" Text="Value" Grid.Column="1" Grid.Row="0" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Name="uniqueTextBlock" Text="Unique Name" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Name="groupTextBlock" Text="Group Name" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Name="labelTextBlock" Text="Label" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Name="itemTextBlock" Text="Items" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Name="countTextBlock" Text="Count" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" Margin="5"/>
+                <TextBlock Name="selectorTextBlock" Text="Selector" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Margin="5"/>
+                <TextBox Name="uniqueNameTextBox" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="5" TextChanged="uniqueNameTextBox_TextChanged" />
+                <TextBox Name="groupNameTextBox" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="5" TextChanged="groupNameTextBox_TextChanged" />
+                <TextBox Name="labelNameTextBox" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Margin="5" TextChanged="labelNameTextBox_TextChanged" />
+                <!--<TextBox Name="itemsNameTextBox" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Margin="5,0,0,0"/>-->
+                <ComboBox Name="countComboBox" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Margin="5" SelectionChanged="countComboBox_SelectionChanged" Loaded="countComboBox_Loaded" />
+                <ComboBox Name="selectorComboBox" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" Margin="5" SelectionChanged="selectorComboBox_SelectionChanged" Loaded="selectorComboBox_Loaded" />
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

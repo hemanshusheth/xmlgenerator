@@ -1,0 +1,12 @@
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\XmlGenerator.csprojResolveAssemblyReference.cache
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\PopUp\ErrorPop.baml
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\MainWindow.g.cs
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\PopUp\DropListControlPopUp.g.cs
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\PopUp\ErrorPop.g.cs
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\PopUp\FormPopUp.g.cs
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\PopUp\TextBoxPopUp.g.cs
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\PopUp\TimeControlPopUp.g.cs
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\App.g.cs
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\XmlGenerator_MarkupCompile.cache
+C:\Users\HEMANSHU\Documents\Visual Studio 2008\Projects\XmlGenerator\XmlGenerator\obj\x86\Debug\XmlGenerator_MarkupCompile.lref
